@@ -65,33 +65,38 @@ $(function(){
 			$(document).ready(function(){
 				reSize();
 			});
+		},Accord:function(d){
+			var obj = this;
+			var type = new Array("img","iframe","video");
+			function reSize(){
+				type.forEach(function(item){
+					$.each(obj.find(item),function(key,elm){
+						if(!$(elm).attr("naturelSize")){
+							$(elm).attr("naturelSize",$(elm).width()+"x"+$(elm).height());
+						}
+						var _sp = $(elm).attr("naturelSize").split("x");
+						if($(obj).width()<=$(elm).width()){
+							$(elm).removeAttr("width");
+							$(elm).width("100%");
+							$(elm).height($(elm).width()*(_sp[1]/_sp[0]));
+						}
+						if($(obj).width()>=_sp[0]){
+							$(elm).removeAttr("width");
+							$(elm).width(_sp[0]);
+							$(elm).height(_sp[1]);
+						}
+					});
+				});
+			}
+			$(window).resize(function(){
+				reSize();
+			});
+			$(document).ready(function(){
+				reSize();
+			});
 		}
 	})
 	$.each($("[size]"),function(key,elm){
 		$(elm).Size($(elm).attr("size"));
 	});
 });
-/*
-$(function(){
-	// Örnek 1
-	$(".div1").Oran({
-		default : {
-			oran:"5x1"
-		},800:{
-			height:"100px"
-		},600:{
-			oran:"5x2"
-		},700:{
-			height:"calc(100VH - 20px)"
-		}
-	});
-	// Örnek 2
-	$(".div2").Oran({
-		default:{
-			height:"calc(100VH - 100px)"
-		},800:{
-			oran:"1600x300"
-		}
-	});
-})
-*/
