@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AddHref</title>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-eris.js"></script>
+</head>
+<body>
+
+<h1>TEST 1</h1>
+<div id="menu1">
+	<div href="/page1">Page 1</div>
+    <img src="img/small_demiryolu.jpg" href="/page2" alt="Demiryolu" />
+    <div href="/page3">Page 3</div>
+</div>
+
+<h1>TEST 2</h1>
+<div id="menu2">
+	<div href="/page4">Page 4</div>
+    <div href="/page5">Page 5</div>
+    <img src="img/small_gol.jpg" href="/test6" alt="Göl" />
+</div>
+
+<h1>TEST 3</h1>
+<div id="menu3">
+	<div href="/page7">Page 7</div>
+    <div href="/page8">Page 8</div>
+    <img src="img/small_gol.jpg" href="/test9" alt="Göl" />
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+	
+	$("#menu1").AddHref();
+	
+	$("#menu2").AddHref({
+		title:false
+	});
+	
+	$("#menu3").AddHref({
+		title:"String Title"
+	});
+	
+});
+</script>
+
+</body>
+</html>

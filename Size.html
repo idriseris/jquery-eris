@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Size</title>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-eris.js"></script>
+</head>
+<body>
+
+<style>
+div {
+	border:1px solid #666;
+	width:20%;
+	margin:10px;
+}
+</style>
+
+<div class="size1">16x9, 100px, 1x1, calc(50VH - 20px)</div>
+<div class="size1">16x9, 100px, 1x1, calc(50VH - 20px)</div>
+<div class="size2">18x6</div>
+<div class="size3">1x1</div>
+<div class="size4" size="10x2">10x2</div>
+
+
+
+<script type="text/javascript">
+$(function(){
+	
+	$(".size1").Size({
+		default : {
+			size:"16x9"
+		},800:{
+			height:"100px"
+		},600:{
+			size:"1x1"
+		},700:{
+			height:"calc(50VH - 20px)"
+		}
+	});
+	
+	$(".size2").Size("18x6");
+	
+	$(".size3").Size("1x1");
+	
+});
+</script>
+</body>
+</html>
