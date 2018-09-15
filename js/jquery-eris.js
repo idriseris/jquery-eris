@@ -1,3 +1,4 @@
+/* V.1.0.1 */
 $(function(){
 	$.fn.extend({
 		AddTitle:function(d){
