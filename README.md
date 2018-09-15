@@ -5,7 +5,7 @@
 ### html
 ```
 <div id="spine">
-	<img src="img/demiryolu.jpg" />
+    <img src="img/demiryolu.jpg" />
     <img src="img/gol.jpg" width="533" height="300" />
     <iframe width="500" height="240" src="https://example.com/"></iframe>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/388-ZnlMoO4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -15,7 +15,7 @@
 ### js
 ```
 $(function(){
-	$("#spine").Accord();
+    $("#spine").Accord();
 });
 ```
 
@@ -30,21 +30,21 @@ $(function(){
 ```
 <h1>TEST 1</h1>
 <div id="menu1">
-	<div href="/page1">Page 1</div>
+    <div href="/page1">Page 1</div>
     <img src="img/small_demiryolu.jpg" href="/page2" alt="Demiryolu" />
     <div href="/page3">Page 3</div>
 </div>
 
 <h1>TEST 2</h1>
 <div id="menu2">
-	<div href="/page4">Page 4</div>
+    <div href="/page4">Page 4</div>
     <div href="/page5">Page 5</div>
     <img src="img/small_gol.jpg" href="/test6" alt="Göl" />
 </div>
 
 <h1>TEST 3</h1>
 <div id="menu3">
-	<div href="/page7">Page 7</div>
+    <div href="/page7">Page 7</div>
     <div href="/page8">Page 8</div>
     <img src="img/small_gol.jpg" href="/test9" alt="Göl" />
 </div>
@@ -52,13 +52,13 @@ $(function(){
 ### js
 ```
 $(function(){
-	$("#menu1").AddHref();
-	$("#menu2").AddHref({
-		title:false
-	});
-	$("#menu3").AddHref({
-		title:"String Title"
-	});
+    $("#menu1").AddHref();
+    $("#menu2").AddHref({
+        title:false
+    });
+    $("#menu3").AddHref({
+        title:"String Title"
+    });
 });
 ```
 
@@ -71,7 +71,7 @@ $(function(){
 ### html
 ```
 <div id="menu">
-	<a href="#">Main Page</a>
+    <a href="#">Main Page</a>
     <a href="#">Project</a>
     <a href="#">Test Page</a>
     <a href="#">Contact</a>
@@ -80,7 +80,7 @@ $(function(){
 ### js
 ```
 $(function(){
-	$("#menu").AddTitle();
+    $("#menu").AddTitle();
 });
 ```
 
@@ -101,18 +101,18 @@ Kısa kullanım için etiket olarak tanımlanabilir.
 ### js
 ```
 $(function(){
-	$(".size1").Size({
-		default : {
-			size:"16x9"
-		},800:{
-			height:"100px"
-		},600:{
-			size:"1x1"
-		},700:{
-			height:"calc(50VH - 20px)"
-		}
-	});
-	$(".size2").Size("18x6");
-	$(".size3").Size("1x1");
+    $(".size1").Size({
+        default : {
+            size:"16x9"
+        },800:{
+            height:"100px"
+        },600:{
+            size:"1x1"
+        },700:{
+            height:"calc(50VH - 20px)"
+        }
+    });
+    $(".size2").Size("18x6");
+    $(".size3").Size("1x1");
 });
 ```
