@@ -1,8 +1,10 @@
 # AddTitle
 Bir objenin altındaki tüm a taglarını içeriğine göre etiketler
 <br /><br />
+
 ## Örnek
-`$("#menu").AddTitle();`
+
+`$("#menu").AddTitle();´
 
 
 
@@ -11,12 +13,12 @@ Objenin width değerine göre height değerinin belirlenmesini sağlar.<br />
 Bu özellik farklı ekran boyutlarına göre tanımlanabilir.
 
 ##Örnek
-`<div class="size1">16x9, 100px, 1x1, calc(50VH - 20px)</div><br>
-<div class="size1">16x9, 100px, 1x1, calc(50VH - 20px)</div>
-<div class="size2">18x6</div>
-<div class="size3">1x1</div>
 `
-```
+<div class="size1">16x9, 100px, 1x1, calc(50VH - 20px)</div><br>
+<div class="size1">16x9, 100px, 1x1, calc(50VH - 20px)</div><br>
+<div class="size2">18x6</div><br>
+<div class="size3">1x1</div><br>
+<br>
 $(function(){
 	$(".size1").Size({
 		default : {
@@ -32,4 +34,4 @@ $(function(){
 	$(".size2").Size("18x6");
 	$(".size3").Size("1x1");
 });
-```
+´
