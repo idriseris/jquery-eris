@@ -116,3 +116,42 @@ $(function(){
     $(".size3").Size("1x1");
 });
 ```
+
+
+
+
+# Display
+Seçilen objenin içindeki resim, video, iframe gibi objeleri sırası ile görüntülemeye yarar.<br>
+YouTube ve Vimeo desteği mevcuttur.<br>
+Seçilecek objeler, obje gruplaması, obje Numarası ve obje ismi opsiyoneldir.
+<br /><br />
+## Örnek
+### html
+```
+<div id="container1">
+	<a href="img/demiryolu.jpg" group="grp1" title="Demiryolu"><img src="img/small_demiryolu.jpg" width="200" height="113" /></a>
+	<a href="img/gol.jpg" group="grp1" title="Göl Kenarı"><img src="img/small_gol.jpg" width="200" height="113" /></a>
+	<a href="https://www.w3schools.com/html/mov_bbb.mp4?width=640&height=352&controls&autoplay" group="grp1" title="Video mp4" ><img src="img/small_caps.jpg" width="200" height="113" /></a>
+	<a href="https://www.youtube.com/embed/Bfoyi_oLrDU?width=1120&height=630" group="grp1" title="YouTube Video"><img src="https://img.youtube.com/vi/Bfoyi_oLrDU/hqdefault.jpg" width="200" height="113" /></a>
+	<a href="https://player.vimeo.com/video/251649912?width=1120&height=630&autoplay=1&loop=1&title=0&byline=0&portrait=0&background=1" group="grp1" title="Vimeo Video"><img src="img/small_orman.jpg" width="200" height="113" /></a>
+	<br />
+	<a href="img/demiryolu.jpg" group="grp2" title="Demiryolu Grup 2"><img src="img/small_demiryolu.jpg" width="200" height="113" /></a>
+	<a href="img/gol.jpg" group="grp2" title="Göl Kenarı Grup 2"><img src="img/small_gol.jpg" width="200" height="113" /></a>
+</div>
+<br />
+<div id="container2">
+	<a href="img/demiryolu.jpg" group="grp2" title="Demiryolu Grup 2"><img src="img/small_demiryolu.jpg" width="200" height="113" /></a>
+	<a href="img/gol.jpg" group="grp2" title="Göl Kenarı Grup 2"><img src="img/small_gol.jpg" width="200" height="113" /></a>
+</div>
+```
+### js
+```
+$(function(){
+	$("#container1").Display({
+		tag:"a",    // default a
+		order:true, // default true
+		title:true  // default true
+	});
+	$("#container2").Display(); // Default
+});
+```
