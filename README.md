@@ -52,13 +52,13 @@ $(function(){
 ### js
 ```
 $(function(){
-    $("#menu1").AddHref();
-    $("#menu2").AddHref({
-        title:false
-    });
-    $("#menu3").AddHref({
-        title:"String Title"
-    });
+	$("#menu1").AddHref();
+	$("#menu2").AddHref({
+		title:false // Default true
+	});
+	$("#menu3").AddHref({
+		title:"String Title" // Default true
+	});
 });
 ```
 
@@ -80,7 +80,9 @@ $(function(){
 ### js
 ```
 $(function(){
-    $("#menu").AddTitle();
+    $("#menu").AddTitle({
+        tag:"a" // Default a
+    });
 });
 ```
 
