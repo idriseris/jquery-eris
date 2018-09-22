@@ -112,11 +112,10 @@
 			var page_title = document.title;
 			var obje = obj.find(tag);
 			var toplam = obje.length;
-			//obje.click(function(){
-			//	return false;
-			//});
 			obje.click(function(){
-				/*
+				return false;
+			});
+			obje.click(function(){
 				obje = $(tag+'[group="'+$(this).attr("group")+'"]');
 				toplam = obje.length;
 				index = obje.index(this);
@@ -165,8 +164,7 @@
 					}
 					loadEvent();
 				});
-				*/
-				//return false;
+				return false;
 			});
 			var loading = function(){
 				$({deg:0}).animate({deg:360},{
@@ -364,36 +362,6 @@
 				}
 				return type;
 			}
-			/*
-			$(this).parent().keydown(function(e){
-				console.log("parent"+e.keyCode);
-			});
-			$(this).keydown(function(e){
-				console.log("this"+e.keyCode);
-				//alert($(this));
-			});
-			*/
-			$(obj).keydown(function(){
-				//console.log("obj"+e.keyCode);
-				alert("Esiz");
-			});
-			//alert($(this));
-			/*
-			$(this).keydown(function(e){
-				if(e.keyCode==39){
-					right();
-				}
-				if(e.keyCode==37){
-					left();
-				}
-				if(e.keyCode==27 || e.keyCode==38 || e.keyCode==40){
-					close();
-				}
-				console.log(e.keyCode);
-			});
-			*/
-			//return obj;
-			/*
 			$(window).on("DOMMouseScroll mousewheel",function(event){
 				if($(".display-mask").length){
 					if(event.originalEvent.detail > 0 || event.originalEvent.wheelDelta < 0){
@@ -403,15 +371,17 @@
 					}
 				}
 			});
-			
-			*/
-			/*
-			$(this).keydown(function(e){
-			//$("body").keydown(function(e){
-				console.log(e.keyCode);
+			$("body").keydown(function(e){
+				if(e.keyCode==39){
+					right();
+				}
+				if(e.keyCode==37){
+					left();
+				}
+				if(e.keyCode==27 || e.keyCode==38 || e.keyCode==40){
+					close();
+				}
 			});
-			*/
-			
 		}
 	})
 	$.each($("[size]"),function(key,elm){
